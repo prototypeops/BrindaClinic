@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment — Brinda Clinic</title>
+  <meta name="description" content="Book your appointment at Brinda Clinic, Port Blair. Choose your preferred date, time, and service." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header" style="padding-top:calc(var(--nav-height) + 60px)">
+  <div class="container">
+    <p class="eyebrow">Schedule a Visit</p>
+    <h1>Book an <em>Appointment</em></h1>
+    <p>Fill in the form below and we'll confirm your slot. Takes less than two minutes.</p>
+  </div>
+</div>
+
+<!-- ═══ APPOINTMENT FORM ═══ -->
+<div class="container">
+  <div class="appointment-layout">
+
+    <!-- Main Form -->
+    <div class="appt-form-card">
+      <h2>Appointment Details</h2>
+      <p class="form-intro">All fields marked with * are required. We'll send a confirmation to your phone number.</p>
+
+      <form class="appt-form" id="appointment-form" novalidate>
+
+        <!-- Full Name -->
+        <div class="form-field">
+          <label for="appt-name">Full Name *</label>
+          <input type="text" id="appt-name" name="name" placeholder="e.g. Priya Nair" required autocomplete="name">
+          <span class="field-error" id="err-name"></span>
+        </div>
+
+        <!-- Phone + Email -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="appt-phone">Phone Number *</label>
+            <input type="tel" id="appt-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+            <span class="field-error" id="err-phone"></span>
+          </div>
+          <div class="form-field">
+            <label for="appt-email">Email Address (optional)</label>
+            <input type="email" id="appt-email" name="email" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="err-email"></span>
+          </div>
+        </div>
+
+        <!-- Date + Time -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="appt-date">Preferred Date *</label>
+            <input type="date" id="appt-date" name="date" required>
+            <span class="field-error" id="err-date"></span>
+          </div>
+          <div class="form-field">
+            <label for="appt-time">Preferred Time *</label>
+            <select id="appt-time" name="time" required>
+              <option value="">Select a time slot</option>
+              <optgroup label="Morning">
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="9:30 AM">9:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+              </optgroup>
+              <optgroup label="Afternoon">
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="2:30 PM">2:30 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="3:30 PM">3:30 PM</option>
+              </optgroup>
+              <optgroup label="Evening">
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="4:30 PM">4:30 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="5:30 PM">5:30 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="6:30 PM">6:30 PM</option>
+              </optgroup>
+            </select>
+            <span class="field-error" id="err-time"></span>
+          </div>
+        </div>
+
+        <!-- Service Type -->
+        <div class="form-field">
+          <label for="appt-service">Service Type *</label>
+          <select id="appt-service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="General Medicine Consultation">General Medicine Consultation</option>
+            <option value="Paediatrics">Paediatrics</option>
+            <option value="Gynaecology">Gynaecology</option>
+            <option value="Cardiology Consultation">Cardiology Consultation</option>
+            <option value="Diabetes Management">Diabetes Management</option>
+            <option value="Preventive Health Check-up">Preventive Health Check-up</option>
+            <option value="Vaccination">Vaccination</option>
+            <option value="Minor Surgical Procedure">Minor Surgical Procedure</option>
+            <option value="Diagnostic / Lab Work">Diagnostic / Lab Work</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="field-error" id="err-service"></span>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-field">
+          <label for="appt-gender">Gender</label>
+          <select id="appt-gender" name="gender">
+            <option value="">Prefer not to say</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="form-field">
+          <label for="appt-notes">Additional Notes <span style="font-weight:300;letter-spacing:0">(optional)</span></label>
+          <textarea id="appt-notes" name="notes" placeholder="Briefly describe your concern, symptoms, or anything you'd like the doctor to know before your visit…"></textarea>
+        </div>
+
+        <!-- Consent -->
+        <div style="display:flex;align-items:flex-start;gap:0.75rem;padding:1rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1.5rem">
+          <input type="checkbox" id="appt-consent" name="consent" required
+                 style="width:16px;height:16px;margin-top:2px;accent-color:var(--text-primary);flex-shrink:0">
+          <label for="appt-consent" style="font-size:0.8rem;color:var(--text-secondary);cursor:pointer;line-height:1.6">
+            I consent to Brinda Clinic collecting and processing my personal information to facilitate this appointment. I have read and agree to the
+            <a href="privacy-policy.html" style="color:var(--text-primary);text-decoration:underline">Privacy Policy</a> and
+            <a href="terms.html" style="color:var(--text-primary);text-decoration:underline">Terms of Service</a>. *
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary form-submit">
+          <i data-lucide="calendar-check" style="width:17px;height:17px"></i>
+          Confirm Appointment
+        </button>
+
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1rem;text-align:center">
+          <i data-lucide="lock" style="width:12px;height:12px;display:inline;margin-right:4px"></i>
+          Your information is encrypted and never shared with third parties.
+        </p>
+      </form>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="appt-sidebar">
+      <!-- Clinic Info -->
+      <div class="appt-info-card">
+        <h4>Clinic Information</h4>
+        <div class="appt-info-item">
+          <i data-lucide="map-pin" class="appt-info-icon" style="width:18px;height:18px"></i>
+          <div>
+            <strong>Address</strong>
+            <span>Near Aberdeen Bazaar, Port Blair, A&amp;N Islands — 744101</span>
+          </div>
+        </div>
+        <div class="appt-info-item">
+          <i data-lucide="phone" class="appt-info-icon" style="width:18px;height:18px"></i>
+          <div>
+            <strong>Phone</strong>
+            <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+          </div>
+        </div>
+        <div class="appt-info-item">
+          <i data-lucide="mail" class="appt-info-icon" style="width:18px;height:18px"></i>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:care@brindaclinic.in">care@brindaclinic.in</a></span>
+          </div>
+        </div>
+        <div class="appt-info-item">
+          <i data-lucide="clock" class="appt-info-icon" style="width:18px;height:18px"></i>
+          <div>
+            <strong>Hours</strong>
+            <span>Mon–Fri: 9 AM – 7 PM<br>Sat: 9 AM – 5 PM<br>Sun: Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- What to bring -->
+      <div class="appt-info-card">
+        <h4>What to Bring</h4>
+        <div style="display:flex;flex-direction:column;gap:0.625rem">
+          <div style="display:flex;align-items:center;gap:0.625rem;font-size:0.875rem;color:var(--text-secondary)">
+            <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--text-primary);flex-shrink:0"></i>
+            Valid Government-issued ID
+          </div>
+          <div style="display:flex;align-items:center;gap:0.625rem;font-size:0.875rem;color:var(--text-secondary)">
+            <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--text-primary);flex-shrink:0"></i>
+            Insurance card (if applicable)
+          </div>
+          <div style="display:flex;align-items:center;gap:0.625rem;font-size:0.875rem;color:var(--text-secondary)">
+            <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--text-primary);flex-shrink:0"></i>
+            Previous medical records / reports
+          </div>
+          <div style="display:flex;align-items:center;gap:0.625rem;font-size:0.875rem;color:var(--text-secondary)">
+            <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--text-primary);flex-shrink:0"></i>
+            List of current medications
+          </div>
+          <div style="display:flex;align-items:center;gap:0.625rem;font-size:0.875rem;color:var(--text-secondary)">
+            <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--text-primary);flex-shrink:0"></i>
+            Appointment confirmation message
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Contact -->
+      <div class="appt-info-card" style="background:var(--text-primary);border-color:var(--text-primary)">
+        <h4 style="color:rgba(255,255,255,0.4)">Need Help?</h4>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.875rem;margin-bottom:1.25rem">Our team is available to assist you with bookings or any medical queries.</p>
+        <a href="tel:+919876543210" class="btn btn--outline" style="width:100%;justify-content:center;color:rgba(255,255,255,0.9);border-color:rgba(255,255,255,0.25);margin-bottom:0.625rem;display:flex">
+          <i data-lucide="phone" style="width:15px;height:15px"></i>
+          Call +91 98765 43210
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" class="btn" style="width:100%;justify-content:center;background:#25D366;color:white;border:none;display:flex">
+          <i data-lucide="message-circle" style="width:15px;height:15px"></i>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SUCCESS OVERLAY ═══ -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <i data-lucide="calendar-check" style="width:34px;height:34px"></i>
+    </div>
+    <h3>Appointment Booked!</h3>
+    <p>
+      Thank you, <strong id="confirm-name">—</strong>. Your appointment for <strong id="confirm-service">—</strong>
+      on <strong id="confirm-date">—</strong> at <strong id="confirm-time">—</strong> has been received.
+      We'll send a confirmation to your number shortly.
+    </p>
+    <a href="index.html" class="btn btn--primary" style="justify-content:center;width:100%;margin-bottom:0.75rem">
+      <i data-lucide="home" style="width:16px;height:16px"></i>
+      Back to Home
+    </a>
+    <button id="success-close" class="btn btn--ghost" style="width:100%;justify-content:center">
+      Book Another
+    </button>
+  </div>
+</div>
+
+<!-- FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+</body>
+</html>
