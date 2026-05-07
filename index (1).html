@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brinda Clinic — Your Trusted Healthcare Partner in Port Blair</title>
+  <meta name="description" content="Brinda Clinic offers compassionate, evidence-based medical care in Port Blair, Andaman & Nicobar Islands. Book your appointment today." />
+  <meta name="keywords" content="Brinda Clinic, doctor Port Blair, medical clinic Andaman, healthcare Andaman, book appointment" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Brinda Clinic — Your Trusted Healthcare Partner" />
+  <meta property="og:description" content="Exceptional medical care in Port Blair, Andaman & Nicobar Islands." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SHARED COMPONENTS (navbar + footer + floats)
+     injected by components.js
+════════════════════════════════════════════ -->
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Accepting New Patients
+        </div>
+        <h1 class="hero-title">
+          Your <em>Trusted</em><br>
+          Healthcare<br>
+          Partner
+        </h1>
+        <p class="hero-desc">
+          At Brinda Clinic, we are committed to providing exceptional medical care with compassion, precision, and a patient-first approach — right here in Port Blair.
+        </p>
+        <div class="hero-cta-group">
+          <a href="appointment.html" class="btn btn--primary">
+            <i data-lucide="calendar-plus" style="width:16px;height:16px"></i>
+            Book Appointment
+          </a>
+          <a href="#services" class="btn btn--outline">
+            <i data-lucide="stethoscope" style="width:16px;height:16px"></i>
+            Our Services
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="15" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Years Experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="8000" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Patients Served</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="12" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Specialisations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="hero-img-placeholder">
+          <img src="hero-doctor.jpg" alt="Doctor at Brinda Clinic"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder-label" style="display:none">
+            <i data-lucide="image" style="width:20px;height:20px"></i>
+            Doctor / Clinic Photo
+          </div>
+        </div>
+
+        <!-- Float cards -->
+        <div class="hero-float-card">
+          <div class="float-icon">
+            <i data-lucide="shield-check" style="width:18px;height:18px"></i>
+          </div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:600">NABH Compliant</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">Safe &amp; Certified Care</div>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <div class="float-icon">
+            <i data-lucide="clock-4" style="width:18px;height:18px"></i>
+          </div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:600">Mon – Sat</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">9 AM – 7 PM</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TICKER ═══ -->
+<div id="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <!-- Set 1 -->
+    <div class="ticker-item">General Medicine <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Paediatrics <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Gynaecology <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Cardiology Consultation <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Diabetes Management <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Preventive Health Check-ups <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Vaccination Services <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Minor Surgical Procedures <span class="ticker-sep">·</span></div>
+    <!-- Set 2 (duplicate for seamless loop) -->
+    <div class="ticker-item">General Medicine <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Paediatrics <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Gynaecology <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Cardiology Consultation <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Diabetes Management <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Preventive Health Check-ups <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Vaccination Services <span class="ticker-sep">·</span></div>
+    <div class="ticker-item">Minor Surgical Procedures <span class="ticker-sep">·</span></div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <p class="eyebrow">What We Offer</p>
+        <h2>Comprehensive<br><em>Medical Services</em></h2>
+      </div>
+      <a href="appointment.html" class="btn btn--ghost">
+        Book a Consultation
+        <i data-lucide="arrow-right" style="width:14px;height:14px"></i>
+      </a>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i data-lucide="stethoscope" style="width:22px;height:22px"></i></div>
+        <h3>General Medicine</h3>
+        <p>Comprehensive diagnosis and treatment of acute and chronic illnesses. Routine check-ups, health screenings, and long-term wellness management.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><i data-lucide="baby" style="width:22px;height:22px"></i></div>
+        <h3>Paediatrics</h3>
+        <p>Specialised care for infants, children, and adolescents. Growth monitoring, vaccinations, and management of childhood illnesses.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><i data-lucide="heart-pulse" style="width:22px;height:22px"></i></div>
+        <h3>Gynaecology</h3>
+        <p>Women's health including prenatal care, reproductive health consultations, and gynaecological examinations in a safe, private environment.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i data-lucide="activity" style="width:22px;height:22px"></i></div>
+        <h3>Cardiology Consultation</h3>
+        <p>ECG, blood pressure management, cholesterol screening, and expert consultation for cardiovascular risk assessment and prevention.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><i data-lucide="droplets" style="width:22px;height:22px"></i></div>
+        <h3>Diabetes Management</h3>
+        <p>Holistic diabetes care — blood glucose monitoring, diet counselling, medication management, and complication prevention strategies.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><i data-lucide="shield-plus" style="width:22px;height:22px"></i></div>
+        <h3>Preventive Health</h3>
+        <p>Annual wellness exams, vaccination schedules, cancer screenings, and lifestyle guidance to keep you healthy before illness strikes.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i data-lucide="syringe" style="width:22px;height:22px"></i></div>
+        <h3>Vaccination Services</h3>
+        <p>Complete immunisation for all age groups — childhood vaccines, travel vaccinations, booster doses, and flu shots throughout the year.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><i data-lucide="scissors" style="width:22px;height:22px"></i></div>
+        <h3>Minor Procedures</h3>
+        <p>Wound care, suturing, abscess drainage, removal of minor skin lesions, and other outpatient procedures performed in a sterile environment.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><i data-lucide="flask-conical" style="width:22px;height:22px"></i></div>
+        <h3>Diagnostic Lab Work</h3>
+        <p>On-site sample collection for blood tests, urinalysis, and pathology. Fast-tracked results with doctor interpretation and follow-up care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-stack reveal">
+        <div class="about-img-main">
+          <img src="clinic-interior.jpg" alt="Brinda Clinic Interior"
+               onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder-label').style.display='flex'">
+          <div class="img-placeholder-label">
+            <i data-lucide="image" style="width:22px;height:22px"></i>
+            Clinic Interior Photo
+          </div>
+        </div>
+        <div class="about-img-secondary">
+          <img src="clinic-exterior.jpg" alt="Brinda Clinic Exterior"
+               onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder-label').style.display='flex'">
+          <div class="img-placeholder-label" style="flex-direction:column;gap:0.4rem;font-size:0.7rem">
+            <i data-lucide="image" style="width:18px;height:18px"></i>
+            Exterior / Reception
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <p class="eyebrow">About Brinda Clinic</p>
+        <h2>A Clinic Built on <em>Trust & Care</em></h2>
+        <p>Founded with a singular vision — to bring world-class medical care closer to the people of the Andaman & Nicobar Islands — Brinda Clinic has served this community for over 15 years with unwavering commitment.</p>
+        <p>We combine modern diagnostic technology with a deeply personal approach to medicine. Every patient who visits us is treated with the same dignity, attention, and respect, regardless of their condition or background.</p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon"><i data-lucide="award" style="width:16px;height:16px"></i></div>
+            <div class="about-feature-text">
+              <h4>Certified Practitioners</h4>
+              <p>All our doctors hold recognised national certifications and pursue continuous medical education.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i data-lucide="microscope" style="width:16px;height:16px"></i></div>
+            <div class="about-feature-text">
+              <h4>Modern Equipment</h4>
+              <p>State-of-the-art diagnostic tools ensure accurate results and faster treatment decisions.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i data-lucide="users" style="width:16px;height:16px"></i></div>
+            <div class="about-feature-text">
+              <h4>Patient-First Culture</h4>
+              <p>From reception to consultation, every interaction is shaped by empathy and respect.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i data-lucide="lock" style="width:16px;height:16px"></i></div>
+            <div class="about-feature-text">
+              <h4>Confidential &amp; Safe</h4>
+              <p>Your health data and privacy are protected under strict medical ethics and digital security.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DOCTOR ═══ -->
+<section id="doctor">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <p class="eyebrow">Meet the Physician</p>
+        <h2>The Doctor <em>Behind<br>Brinda Clinic</em></h2>
+      </div>
+    </div>
+
+    <div class="doctor-card reveal">
+      <div class="doctor-photo">
+        <img src="doctor-photo.jpg" alt="Lead Physician at Brinda Clinic"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder-label').style.display='flex'">
+        <div class="img-placeholder-label" style="flex-direction:column;gap:0.75rem">
+          <i data-lucide="user-round" style="width:36px;height:36px"></i>
+          <span>Doctor Photo</span>
+        </div>
+        <div class="doctor-badge">Lead Physician</div>
+      </div>
+
+      <div class="doctor-info">
+        <p class="eyebrow">MBBS, MD — General Medicine</p>
+        <h2 class="doctor-name">Dr. Brinda [Surname]</h2>
+        <p class="doctor-title">Senior Consultant · General & Family Medicine</p>
+        <p class="doctor-bio">
+          With over 15 years of dedicated clinical practice, Dr. Brinda has transformed countless lives through patient-centred medicine. Trained at premier medical institutions across India, she brings both the depth of specialist knowledge and the warmth of a family doctor to every consultation.
+        </p>
+        <p class="doctor-bio" style="margin-top:-0.5rem">
+          Her expertise spans acute illnesses, chronic disease management, paediatric care, and women's health — making her one of the most sought-after physicians in the Andaman & Nicobar region.
+        </p>
+
+        <div class="doctor-credentials">
+          <div class="credential-item">
+            <div class="credential-icon"><i data-lucide="graduation-cap" style="width:14px;height:14px"></i></div>
+            MBBS — [Medical College Name], India
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon"><i data-lucide="badge-check" style="width:14px;height:14px"></i></div>
+            MD General Medicine — [University Name]
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon"><i data-lucide="briefcase-medical" style="width:14px;height:14px"></i></div>
+            15+ Years Clinical Experience
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon"><i data-lucide="star" style="width:14px;height:14px"></i></div>
+            Member, Indian Medical Association (IMA)
+          </div>
+        </div>
+
+        <div class="doctor-social">
+          <a href="#" class="social-btn" title="LinkedIn">
+            <i data-lucide="linkedin" style="width:16px;height:16px"></i>
+          </a>
+          <a href="#" class="social-btn" title="Instagram">
+            <i data-lucide="instagram" style="width:16px;height:16px"></i>
+          </a>
+          <a href="mailto:care@brindaclinic.in" class="social-btn" title="Email">
+            <i data-lucide="mail" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <p class="eyebrow">Our Facility</p>
+        <h2>Inside <em>Brinda Clinic</em></h2>
+      </div>
+      <p style="max-width:340px;text-align:right;font-size:0.875rem">A comfortable, modern environment designed to put patients at ease from the moment they arrive.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" style="grid-row:span 2">
+        <img src="gallery-1.jpg" alt="Clinic main hall" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none'">
+        <div class="gallery-label">
+          <i data-lucide="image-plus" style="width:20px;height:20px"></i>
+          Main Hall
+        </div>
+        <div class="gallery-add">Click to upload</div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-2.jpg" alt="Consultation room" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none'">
+        <div class="gallery-label">
+          <i data-lucide="image-plus" style="width:20px;height:20px"></i>
+          Consultation Room
+        </div>
+        <div class="gallery-add">Click to upload</div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-3.jpg" alt="Reception area" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none'">
+        <div class="gallery-label">
+          <i data-lucide="image-plus" style="width:20px;height:20px"></i>
+          Reception
+        </div>
+        <div class="gallery-add">Click to upload</div>
+      </div>
+      <div class="gallery-item" style="grid-column:span 2">
+        <img src="gallery-4.jpg" alt="Lab and diagnostics" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none'">
+        <div class="gallery-label">
+          <i data-lucide="image-plus" style="width:20px;height:20px"></i>
+          Diagnostics / Lab Area
+        </div>
+        <div class="gallery-add">Click to upload</div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-5.jpg" alt="Waiting area" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none'">
+        <div class="gallery-label">
+          <i data-lucide="image-plus" style="width:20px;height:20px"></i>
+          Waiting Area
+        </div>
+        <div class="gallery-add">Click to upload</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <p class="eyebrow">Patient Stories</p>
+        <h2>Words From <em>Those We've Helped</em></h2>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+        </div>
+        <p class="testimonial-text">"Dr. Brinda took the time to genuinely listen to my concerns. After years of unresolved issues, her thorough approach finally led to a correct diagnosis. The care and follow-up have been exceptional."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Ramesh Nair</div>
+            <div class="author-detail">Port Blair · General Medicine</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+        </div>
+        <p class="testimonial-text">"Our entire family visits Brinda Clinic. The paediatric care for our children has been outstanding — gentle, thorough, and always reassuring. I cannot imagine going anywhere else."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Anita Sharma</div>
+            <div class="author-detail">Neil Island · Paediatrics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+          <i data-lucide="star" style="width:14px;height:14px;fill:currentColor"></i>
+        </div>
+        <p class="testimonial-text">"The online booking system made it so easy to schedule my appointment. When I arrived, the staff were warm and professional. Brinda Clinic sets the standard for healthcare in the Andamans."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <div class="author-name">Suresh Kumar</div>
+            <div class="author-detail">Havelock Island · Check-up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPOINTMENT CTA ═══ -->
+<section id="appointment-cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-content">
+        <p class="eyebrow">Ready to See Us?</p>
+        <h2>Book Your <em>Appointment</em> Today</h2>
+        <p>Scheduling your visit takes less than two minutes. Choose your preferred date, time, and service — and we'll be ready for you.</p>
+
+        <div class="cta-features">
+          <div class="cta-feature">
+            <div class="cta-feature-check"><i data-lucide="check" style="width:12px;height:12px"></i></div>
+            Confirmation sent to your phone instantly
+          </div>
+          <div class="cta-feature">
+            <div class="cta-feature-check"><i data-lucide="check" style="width:12px;height:12px"></i></div>
+            No waiting — secure your slot in advance
+          </div>
+          <div class="cta-feature">
+            <div class="cta-feature-check"><i data-lucide="check" style="width:12px;height:12px"></i></div>
+            All consultations are strictly confidential
+          </div>
+          <div class="cta-feature">
+            <div class="cta-feature-check"><i data-lucide="check" style="width:12px;height:12px"></i></div>
+            WhatsApp reminders before your appointment
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick form preview linking to full form -->
+      <div class="cta-form-preview">
+        <p class="form-preview-title">Schedule a Visit</p>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" readonly onclick="window.location.href='appointment.html'" style="cursor:pointer">
+          </div>
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" readonly onclick="window.location.href='appointment.html'" style="cursor:pointer">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Date</label>
+            <input type="date" readonly onclick="window.location.href='appointment.html'" style="cursor:pointer">
+          </div>
+          <div class="form-field">
+            <label>Service</label>
+            <select disabled onclick="window.location.href='appointment.html'" style="cursor:pointer">
+              <option>Select service…</option>
+            </select>
+          </div>
+        </div>
+        <a href="appointment.html" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:0.5rem">
+          <i data-lucide="calendar-plus" style="width:16px;height:16px"></i>
+          Go to Booking Form
+        </a>
+        <p style="font-size:0.75rem;text-align:center;margin-top:0.875rem;color:var(--text-muted)">
+          Or call us: <a href="tel:+919876543210" style="color:var(--text-primary);font-weight:500">+91 98765 43210</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAP ═══ -->
+<section id="map-section">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:2.5rem">
+      <div class="section-header-left">
+        <p class="eyebrow">Find Us</p>
+        <h2>Visit <em>Brinda Clinic</em></h2>
+      </div>
+    </div>
+    <div class="map-inner reveal">
+      <div class="map-info">
+        <div>
+          <h3>Brinda Clinic</h3>
+          <p style="font-size:0.8rem;color:var(--text-muted)">Port Blair, Andaman &amp; Nicobar</p>
+        </div>
+
+        <div class="map-detail">
+          <div class="map-detail-icon"><i data-lucide="map-pin" style="width:15px;height:15px"></i></div>
+          <div class="map-detail-text">
+            <strong>Address</strong>
+            Near Aberdeen Bazaar, Port Blair,<br>Andaman &amp; Nicobar Islands — 744101
+          </div>
+        </div>
+
+        <div class="map-detail">
+          <div class="map-detail-icon"><i data-lucide="phone" style="width:15px;height:15px"></i></div>
+          <div class="map-detail-text">
+            <strong>Phone</strong>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+        </div>
+
+        <div class="map-detail">
+          <div class="map-detail-icon"><i data-lucide="mail" style="width:15px;height:15px"></i></div>
+          <div class="map-detail-text">
+            <strong>Email</strong>
+            <a href="mailto:care@brindaclinic.in">care@brindaclinic.in</a>
+          </div>
+        </div>
+
+        <div class="map-detail">
+          <div class="map-detail-icon"><i data-lucide="clock" style="width:15px;height:15px"></i></div>
+          <div class="map-detail-text">
+            <strong>Hours</strong>
+            Mon – Fri: 9 AM – 7 PM<br>
+            Saturday: 9 AM – 5 PM<br>
+            Sunday: Closed
+          </div>
+        </div>
+
+        <a href="https://maps.google.com/?q=Port+Blair+Andaman+Nicobar+India" target="_blank" rel="noopener"
+           class="btn btn--primary map-directions-btn">
+          <i data-lucide="navigation" style="width:15px;height:15px"></i>
+          Get Directions
+        </a>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15563.88936088!2d92.7261503!3d11.6234233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x308013536b7d3bd7%3A0xf3e64416b7b1e5e8!2sPort%20Blair%2C%20Andaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Brinda Clinic location on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <p class="eyebrow">Common Questions</p>
+        <h2>Frequently Asked <em>Questions</em></h2>
+      </div>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I book an appointment at Brinda Clinic?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            You can book online using our appointment form on this website, call us at +91 98765 43210, or message us on WhatsApp. Online bookings are available 24/7 and you'll receive a confirmation within minutes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are your consultation fees?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            General consultation starts at ₹300. Specialist consultations, diagnostic tests, and procedures are priced separately. Please call or WhatsApp us for the most current fee schedule.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you accept health insurance?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            Yes, we accept most major health insurance plans including CGHS, ECHS, and private insurance schemes. Please bring your insurance card and valid photo ID. Contact us beforehand to verify your specific coverage.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What should I bring for my first visit?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            Please bring a valid government-issued ID, your insurance card (if applicable), any previous medical records or reports, a list of current medications, and your appointment confirmation message.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I reschedule or cancel my appointment?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. Please inform us at least 4 hours before your scheduled time via call or WhatsApp so we can accommodate other patients. Walk-in requests are welcome subject to doctor availability.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a facility for emergency cases?
+            <i data-lucide="plus" class="faq-icon" style="width:18px;height:18px"></i>
+          </button>
+          <div class="faq-answer">
+            For life-threatening emergencies, please call 102 or visit the Government Medical College & Hospital, Port Blair. We handle minor emergencies and urgent consultations during clinic hours — call us and we will guide you appropriately.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-cta reveal reveal-delay-1">
+        <h3>Still Have Questions?</h3>
+        <p>Our team is happy to help with any queries about services, appointments, or medical concerns. Reach us through any channel that's convenient for you.</p>
+        <div class="faq-cta-btns">
+          <a href="tel:+919876543210" class="btn btn--primary">
+            <i data-lucide="phone" style="width:15px;height:15px"></i>
+            Call Us
+          </a>
+          <a href="https://wa.me/919876543210?text=Hello%20Brinda%20Clinic%2C%20I%20have%20a%20question." target="_blank" class="btn btn--outline">
+            <i data-lucide="message-circle" style="width:15px;height:15px"></i>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER PLACEHOLDER ═══ -->
+<div id="footer-placeholder"></div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script src="components.js"></script>
+</body>
+</html>
